@@ -1,0 +1,14 @@
+<%= form_tag "/movies", method: :get %>
+  <%= text_field_tag :query %>
+  <%= submit_tag "Search by title" %>
+
+<% if @response %>
+  <% @response.each do |element| %>
+    <h4>
+      <%= element["title"] %>
+    </h4>
+   <p>
+      
+    </p> 
+  <% end %>
+<% end %>
